@@ -8,11 +8,12 @@
         "airbnb-typescript",
         "plugin:react/recommended",
         "plugin:import/typescript",
-        "prettier"
+        "plugin:prettier/recommended"
     ],
     "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "extraFileExtensions": [".json"],
         "ecmaVersion": "latest",
         "sourceType": "module",
         "project": "./tsconfig.json"
