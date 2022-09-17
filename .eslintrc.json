@@ -4,28 +4,29 @@
         "es2021": true
     },
     "extends": [
+        "airbnb",
+        "airbnb-typescript",
         "plugin:react/recommended",
         "plugin:import/typescript",
-        "airbnb",
-        "airbnb-typescript"
+        "plugin:prettier/recommended"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "extraFileExtensions": [".json"],
         "ecmaVersion": "latest",
         "sourceType": "module",
         "project": "./tsconfig.json"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
-    ],
+    "plugins": ["react", "@typescript-eslint", "prettier"],
     "rules": {
-        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "@typescript-eslint/quotes": ["error", "double", { "avoidEscape": true }],
         "@typescript-eslint/indent": ["error", 4],
         "react/jsx-indent": ["error", 4],
-        "react/jsx-indent-props": ["error", 4]
+        "react/jsx-indent-props": ["error", 4],
+        "react/react-in-jsx-scope": ["off"],
+        "react/jsx-uses-react": ["off"],
+        "react/jsx-props-no-spreading": ["warn"]
     }
 }
